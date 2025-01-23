@@ -6,8 +6,13 @@ export const LocalRouter = () => {
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        {NavLinks.map((link) => (
-          <Route path={link.path} element={link.element} index={link.isIndex} />
+        {NavLinks.map((link, index) => (
+          <Route
+            path={link.path}
+            element={link.element}
+            index={link.isIndex}
+            key={index}
+          />
         ))}
       </Route>
     </Routes>

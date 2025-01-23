@@ -17,6 +17,7 @@ function App() {
                 path={link.path}
                 element={link.element}
                 index={link.isIndex}
+                key={index}
               />
             ))}
           </Route>
